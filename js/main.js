@@ -147,12 +147,20 @@ window.addEventListener("load", function(event){
 btnClear.addEventListener("click", function(event){
     event.preventDefault();
    
-     productosTotal.innerText ="0"; 
-     precioTotal.innerText= "$"+ 0.00;
-     cuerpoTabla.innerHTML="";
-     contadorProductos.innerText="0";
-     localStorage,removeitem("datos");
-     localStorage.removeitem("resumen");
+     productosTotal.innerText = 0; 
+     precioTotal.innerText= 0;
+     cuerpoTabla.innerHTML=0;
+     contadorProductos.innerText=0;
+         txtName.value.innerText=0;
+         txtNumber.value.innerText=0;
+         localStorage.removeItem("datos");
+         localStorage.removeItem("resumen");
+//en caso de que los datos sean invalidos entonces tambien me limpia el borde y los alert
+ txtName.style.border=0;
+ txtNumber.style.border=0;
+ alertValidacionesTexto.innerHTML= 0;
+ alertValidaciones.style.display="none";
+
 
 })
 
